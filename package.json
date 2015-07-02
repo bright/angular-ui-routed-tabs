@@ -1,0 +1,31 @@
+{
+  "name": "angular-ui-routed-tabs",
+  "version": "0.0.1",
+  "description": "AngularJS Bootstrap-based tabs that adhere to current ui-router state and allow easy state switching",
+  "main": "ui-routed-tabs.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-ng-annotate": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bright/angular-ui-routed-tabs.git"
+  },
+  "keywords": [
+    "angular",
+    "AngularJS",
+    "angular-ui",
+    "tabs",
+    "routed-tabs",
+    "ui-router-tabs"
+  ],
+  "author": "Adam Bar <adamrbar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bright/angular-ui-routed-tabs/issues"
+  },
+  "homepage": "https://github.com/bright/angular-ui-routed-tabs#readme"
+}
