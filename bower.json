@@ -1,0 +1,28 @@
+{
+  "name": "angular-ui-routed-tabs",
+  "version": "0.0.1",
+  "authors": [
+    "Adam Bar <adamrbar@gmail.com>"
+  ],
+  "description": "AngularJS Bootstrap-based tabs that adhere to current ui-router state and allow easy state switching",
+  "keywords": [
+    "angular",
+    "AngularJS",
+    "angular-ui",
+    "tabs",
+    "routed-tabs",
+    "ui-router-tabs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.2.0",
+    "angular-ui-router": "~0.2.14"
+  },
+  "devDependencies": {
+  }
+}
