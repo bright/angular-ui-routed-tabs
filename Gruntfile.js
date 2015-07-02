@@ -31,17 +31,14 @@ module.exports = function (grunt) {
                 }
             }
         },
-        uglify: {
-            options: {
-                mangle: false
-            },
+        ngAnnotate: {
             build: {
                 files: {},
                 src: 'ui-routed-tabs.js',
                 dest: 'ui-routed-tabs.min.js'
             }
         },
-        ngAnnotate: {
+        uglify: {
             build: {
                 files: {},
                 src: 'ui-routed-tabs.min.js',
@@ -50,5 +47,5 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('default', ['jshint:beforeconcat', 'uglify:build', 'ngAnnotate:build']);
+    grunt.registerTask('default', ['jshint:beforeconcat', 'ngAnnotate:build', 'uglify:build']);
 };
