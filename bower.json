@@ -19,8 +19,9 @@
     "node_modules",
     "bower_components"
   ],
+  "main": "ui-routed-tabs.js",
   "dependencies": {
-    "angular": "~1.2.0",
+    "angular": ">=1.2.0",
     "angular-ui-router": "~0.2.14"
   },
   "devDependencies": {
