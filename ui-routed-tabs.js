@@ -73,6 +73,15 @@
     });
 
     module.directive('routedTab', function ($parse, $state, $rootScope) {
+        function any(array, predicate) {
+            for (var key in array) {
+                if (array.hasOwnProperty(key) && predicate(array[key])) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         return {
             require: '^routedTabset',
             restrict: 'EA',
@@ -92,7 +101,7 @@
                     observedRoutes.push($attrs.uiSref);
 
                     var updateActive = function () {
-                        var active = _.any(observedRoutes, function (route) {
+                        var active = any(observedRoutes, function (route) {
                             return $state.current.name.indexOf(route) === 0;
                         });
                         if (active) {
@@ -130,7 +139,7 @@
 
                     $scope.headingElement = $scope.heading;
                     if (!$scope.heading) {
-                        $scope.headingElement = transclude($scope);
+                        $scope.headingElement = transclude($scope.$parent);
                     }
 
                     updateActive();
