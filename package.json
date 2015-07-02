@@ -1,6 +1,6 @@
 {
   "name": "angular-ui-routed-tabs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "AngularJS Bootstrap-based tabs that adhere to current ui-router state and allow easy state switching",
   "main": "ui-routed-tabs.js",
   "dependencies": {},
