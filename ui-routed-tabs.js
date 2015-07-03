@@ -2,7 +2,7 @@
 (function (angular) {
     var module = angular.module('ui-routed-tabs', []);
 
-    module.controller('RoutedTabsetController', function RoutedTabsetController($scope) {
+    module.controller('RoutedTabsetController', ["$scope", function RoutedTabsetController($scope) {
         var ctrl = this,
             tabs = ctrl.tabs = $scope.tabs = [];
 
@@ -41,9 +41,9 @@
         $scope.$on('$destroy', function () {
             destroyed = true;
         });
-    });
+    }]);
 
-    module.run(function ($templateCache) {
+    module.run(["$templateCache", function ($templateCache) {
         $templateCache.put('template/tabs/routed-tabset.html',
             '<div>\n' +
             '  <ul class="nav nav-{{type || \'tabs\'}}" ng-class="{\'nav-stacked\': vertical, \'nav-justified\': justified}" ng-transclude></ul>\n' +
@@ -53,7 +53,7 @@
             '<li ng-class="{active: active, disabled: disabled}">\n' +
             '  <a href ng-click="select()" routed-tab-heading-transclude></a>\n' +
             '</li>\n');
-    });
+    }]);
 
     module.directive('routedTabset', function () {
         return {
@@ -72,7 +72,7 @@
         };
     });
 
-    module.directive('routedTab', function ($parse, $state, $rootScope) {
+    module.directive('routedTab', ["$parse", "$state", "$rootScope", function ($parse, $state, $rootScope) {
         function any(array, predicate) {
             for (var key in array) {
                 if (array.hasOwnProperty(key) && predicate(array[key])) {
@@ -146,7 +146,7 @@
                 };
             }
         };
-    });
+    }]);
 
     module.directive('routedTabHeadingTransclude', function () {
         return {

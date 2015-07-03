@@ -35,13 +35,13 @@ module.exports = function (grunt) {
             build: {
                 files: {},
                 src: 'ui-routed-tabs.js',
-                dest: 'ui-routed-tabs.min.js'
+                dest: 'ui-routed-tabs.js'
             }
         },
         uglify: {
             build: {
                 files: {},
-                src: 'ui-routed-tabs.min.js',
+                src: 'ui-routed-tabs.js',
                 dest: 'ui-routed-tabs.min.js'
             }
         }
